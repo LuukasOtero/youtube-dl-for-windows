@@ -12,7 +12,7 @@
 
 # DESCRIPTION
 
-**youtube-dl** is a command-line program for download videos from YouTube.com. It requires the Python interpreter, version 2.6, 2.7, or 3.2+, and it is not platform specific. This project is focused on Windows, but on the [Official GitHub](https://github.com/ytdl-org/youtube-dl), you will find it for Linux and macOS. It is released into the public domain, which means that you can modify it, redistribute it, or use it however you want.
+**youtube-dl** is a command-line program for download videos from YouTube.com. It requires the Python interpreter, version 2.6, 2.7, or 3.2+, and it is not platform specific. This project is focused on Windows, but on the [Official GitHub](https://github.com/ytdl-org/youtube-dl), you will find it for Linux and macOS. It is released to the public domain, which means you can modify it, redistribute it or use it however you like.
 
 # PYTHON INSTALLATION
 
@@ -121,9 +121,9 @@ Los comentarios estarán debajo de cada porción con el fin de dejar el código 
     @echo Ingresar la URL de youtube:
     set c="
     set /p URL=
-    youtube-dl -f bestaudio %c%%URL%%c% -x --audio-format mp3 -o C:\<nombreDeLaCarpeta>\<carpetaDeDescargas>\%%(title)s.^%%(ext)s && cls & @echo La descarga se completo exitosamente.
+    youtube-dl -f bestaudio %c%%URL%%c% -x --audio-format mp3 -o C:\<nameFolder>\<folderDownloads>\%%(title)s.^%%(ext)s && cls & @echo The download was completed successfully.
     @echo.
-    choice /c SN /n /m "Descargar otra cancion? (S,N)"
+    choice /c YN /n /m "Download another song? (Y,N)"
     if errorlevel 2 goto Adios
     goto Reiniciar
 ```
@@ -132,6 +132,6 @@ Acuerdense de cambiar las rutas, como por ejemplo: `"C:\<nombreDeLaCarpeta>\ffmp
 
 # COPYRIGHT
 
-"Youtube-dl" y "FFMPEG" es de dominio público. Encontrarán las páginas oficiales a lo largo del proyecto.
+"Youtube-dl" and "FFMPEG" is in the public domain. You will find the official pages throughout the project.
 
-Gran parte de la investigación de este README originalmente fue escrito por [Daniel Bolton](https://github.com/dbbolton) y también se libera al dominio público.
+Much of the research for this README was originally written by [Daniel Bolton](https://github.com/dbbolton) and is also released into the public domain.
