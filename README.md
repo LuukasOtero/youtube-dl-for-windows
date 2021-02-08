@@ -12,7 +12,7 @@
 
 # DESCRIPTION
 
-**youtube-dl** es un programa de línea de comandos para descargar videos de YouTube.com. Requiere el intérprete de Python, versión 2.6, 2.7 o 3.2+, y no es específico de la plataforma. Este proyecto está enfocado a Windows, pero en el [GitHub oficial](https://github.com/ytdl-org/youtube-dl), encontrarán para Linux y macOS. Se libera al dominio público, lo que significa que puede modificarlo, redistribuirlo o utilizarlo como desee.
+**youtube-dl** is a command-line program for download videos from YouTube.com. It requires the Python interpreter, version 2.6, 2.7, or 3.2+, and it is not platform specific. This project is focused on Windows, but on the [Official GitHub](https://github.com/ytdl-org/youtube-dl), you will find it for Linux and macOS. It is released into the public domain, which means that you can modify it, redistribute it, or use it however you want.
 
 # PYTHON INSTALLATION
 
