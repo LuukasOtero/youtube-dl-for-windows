@@ -71,8 +71,8 @@ The comments will be below each portion in order to leave the code clean. At the
     pip install --upgrade youtube-dl
 ```
 
-- En caso de necesitar una actualización el interprete de Python, la descargará e instalará. LA RUTA PUEDE CAMBIAR, TODO DEPENDE DE DONDE INSTALASTE PYTHON, EN CASO DE TENER OTRA RUTA, CAMBIARLA.
-- También revisará si la aplicación necesita actualizarse.
+- In case an update is needed, the Python interpreter will download and install it. **THE PATH MAYBE CHANGE, IT DEPENDS ON WHERE YOU INSTALLED PYTHON, IF YOU HAVE ANOTHER PATH, CHANGE IT.**
+- It will also check if the application needs to be updated.
 
 ```
     cd "C:\<folderName>\ffmpeg\bin"
