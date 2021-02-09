@@ -23,7 +23,7 @@ To download Python:
     https://www.python.org/downloads/
     
 - Install Python.
-- Verificar que el PATH "Python" se haya ingresado bien. Para eso usaremos el shortcut de Windows, apretando "Ctrl" + "R" y escribiendo: `"SystemPropertiesAdvanced.exe"`. Apretamos donde dice "Variables de entorno", miramos que este correctamente ingresado el PATH, de lo contrario agregarlo. Seguido de eso, verificar que en "Variables del sistema", en la parte de "PATHEXT" esté ".EXE", de lo contrario agregarlo.
+- Verify the "Python" **PATH** has been entered correctly. For that we will use the Windows shortcut, press *"Ctrl" + "R"*, then write: `"SystemPropertiesAdvanced.exe"`. Press  `"Environment Variables"` button, check that the **PATH** is correctly entered, otherwise add it. Then, verify *"System variables"*, in the *"PATHEXT"* part to have *".EXE"*, otherwise add it.
 
 # FFMPEG INSTALLATION
 
@@ -31,11 +31,11 @@ To download FFMPEG:
 
     https://ffmpeg.org/download.html#build-windows
 
-- I recommend moving the downloaded file to disk `"C"`, pueden crear una carpeta llamada "FFMPEG", por ejemplo.
-- Descomprimir el `".rar"` en la carpeta antes mencionada.
-- *Remember to que no deben crear la carpeta en "C:\Windows\System32".*
+- I recommend moving the downloaded file to disk `"C"`, can create a folder called *"FFMPEG"*, for example.
+- Unzip the `".rar"` into the aforementioned folder.
+- *Remember to which mustn't create the folder in "C:\Windows\System32".*
 
-Una vez realizado los pasos, te quedará algo así: "C:\<nombreDeLaCarpeta>\ffmpeg\bin".
+Once the steps are done, will have something like this: `"C:\<nameFolder>\ffmpeg\bin"`
 
 # YOUTUBE-DL INSTALLATION
 
@@ -53,7 +53,7 @@ To download Youtube-dl:
 - Change its extension to `".bat"`
 - *Right click -> edit*. If you have a preferred text editor you can also use it.
 
-Los comentarios estarán debajo de cada porción con el fin de dejar el código limpio, al final estará el mismo sin comentarios para que puedan copiarlo y pegarlo, creando las modificaciones necesarias.
+The comments will be below each portion in order to leave the code clean. At the end, will be the same code without comments so that can copy and paste it, creating the necessary modifications.
 
     @echo off
     title Downloader songs from Youtube
@@ -96,7 +96,7 @@ Los comentarios estarán debajo de cada porción con el fin de dejar el código 
 
 - Create a loop, in my case is `"Reboot"`
 - Set a variable which cannot be modified to contain double quotes.
-- Set a variable which the user has to set (will be the URL).
+- Set a variable which the user has to set (URL).
 - Extract the best audio available.
 - Normally the 2 audio formats that will appear are: `".wbem"` or `".m4a"`. No matter which one, they will be converted to `".mp3"` with the program *"FFMPEG"*.
 - Enter the path where to download the songs, in my case is: `-o C:\<folderName>\<folderDownloads>\%%(title)s.^%%(ext)s`
