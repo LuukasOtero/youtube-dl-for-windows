@@ -23,7 +23,7 @@ To download Python:
     https://www.python.org/downloads/
     
 - Install Python.
-- Verificar que el PATH "Python" se haya ingresado bien. Para eso usaremos el shortcut de Windows, apretando "Ctrl" + "R" y escribiendo: "SystemPropertiesAdvanced.exe". Apretamos donde dice "Variables de entorno", miramos que este correctamente ingresado el PATH, de lo contrario agregarlo. Seguido de eso, verificar que en "Variables del sistema", en la parte de "PATHEXT" esté ".EXE", de lo contrario agregarlo.
+- Verificar que el PATH "Python" se haya ingresado bien. Para eso usaremos el shortcut de Windows, apretando "Ctrl" + "R" y escribiendo: `"SystemPropertiesAdvanced.exe"`. Apretamos donde dice "Variables de entorno", miramos que este correctamente ingresado el PATH, de lo contrario agregarlo. Seguido de eso, verificar que en "Variables del sistema", en la parte de "PATHEXT" esté ".EXE", de lo contrario agregarlo.
 
 # FFMPEG INSTALLATION
 
@@ -132,6 +132,6 @@ Remember to change the paths, for the example: `"C:\<folderName>\ffmpeg\bin"` or
 
 # COPYRIGHT
 
-"Youtube-dl" and "FFMPEG" is in the public domain. You will find the official pages throughout the project.
+*"Youtube-dl" and "FFMPEG" is in the public domain. You will find the official pages throughout the project.
 
-Much of the research for this README was originally written by [Daniel Bolton](https://github.com/dbbolton) and is also released into the public domain.
+*Much of the research for this README was originally written by [Daniel Bolton](https://github.com/dbbolton) and is also released into the public domain.
