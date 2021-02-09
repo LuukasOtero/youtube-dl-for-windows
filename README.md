@@ -132,6 +132,6 @@ Remember to change the paths, for the example: `"C:\<folderName>\ffmpeg\bin"` or
 
 # COPYRIGHT
 
-*"Youtube-dl" and "FFMPEG" is in the public domain. You will find the official pages throughout the project.
+*"Youtube-dl" and "FFMPEG" is in the public domain. You will find the official pages throughout the project.*
 
-*Much of the research for this README was originally written by [Daniel Bolton](https://github.com/dbbolton) and is also released into the public domain.
+*Much of the research for this README was originally written by [Daniel Bolton](https://github.com/dbbolton) and is also released into the public domain.*
