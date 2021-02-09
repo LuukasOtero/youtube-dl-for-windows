@@ -31,9 +31,9 @@ To download FFMPEG:
 
     https://ffmpeg.org/download.html#build-windows
 
-- Recomiendo mover el archivo descargado al disco local "C", pueden crear una carpeta llamada "FFMPEG", por ejemplo.
-- Descomprimir el ".rar" en la carpeta antes mencionada.
-- *Recuerden que no deben crear la carpeta en "C:\Windows\System32".*
+- I recommend moving the downloaded file to disk `"C"`, pueden crear una carpeta llamada "FFMPEG", por ejemplo.
+- Descomprimir el `".rar"` en la carpeta antes mencionada.
+- *Remember to que no deben crear la carpeta en "C:\Windows\System32".*
 
 Una vez realizado los pasos, te quedará algo así: "C:\<nombreDeLaCarpeta>\ffmpeg\bin".
 
@@ -43,7 +43,7 @@ To download Youtube-dl:
 
     http://ytdl-org.github.io/youtube-dl/
 
-- Download "youtube-dl".
+- Download `"youtube-dl"`
 - Do not run it.
 - I recommend moving it to `"C:\<folderName>\" (are 2 directories behind to "\ffmpeg\bin")`
 
@@ -51,7 +51,7 @@ To download Youtube-dl:
 
 - Create a notepad in `"C:\<folderName>\"`
 - Change its extension to `".bat"`
-- Right click -> edit. If you have a preferred text editor you can also use it.
+- *Right click -> edit*. If you have a preferred text editor you can also use it.
 
 Los comentarios estarán debajo de cada porción con el fin de dejar el código limpio, al final estará el mismo sin comentarios para que puedan copiarlo y pegarlo, creando las modificaciones necesarias.
 
@@ -78,7 +78,7 @@ Los comentarios estarán debajo de cada porción con el fin de dejar el código 
     cd "C:\<folderName>\ffmpeg\bin"
 ```
 
-- Enter to directory where we have "ffmpeg.exe". The path can be change, it all depends on where they installed the "FFMPEG".
+- Enter to directory where we have `"ffmpeg.exe"`. The path can be change, it all depends on where they installed the *"FFMPEG"*.
 
 ```
     :Reboot
@@ -94,11 +94,11 @@ Los comentarios estarán debajo de cada porción con el fin de dejar el código 
     goto Reboot
 ```
 
-- Create a loop, in my case is "Reboot"
+- Create a loop, in my case is `"Reboot"`
 - Set a variable which cannot be modified to contain double quotes.
 - Set a variable which the user has to set (will be the URL).
 - Extract the best audio available.
-- Normalmente los 2 formatos de audios que aparecerán son: ".wbem" ó ".m4a". No importa cuál, serán convertidos a ".mp3" con el programa "FFMPEG".
+- Normally the 2 audio formats that will appear are: `".wbem"` or `".m4a"`. No matter which one, they will be converted to `".mp3"` with the program *"FFMPEG"*.
 - Enter the path where to download the songs, in my case is: `-o C:\<folderName>\<folderDownloads>\%%(title)s.^%%(ext)s`
 
 # FINISHED SCRIPT
