@@ -22,7 +22,7 @@ To download Python:
 
     https://www.python.org/downloads/
     
-- Run the Python installer.
+- Install Python.
 - Verificar que el PATH "Python" se haya ingresado bien. Para eso usaremos el shortcut de Windows, apretando "Ctrl" + "R" y escribiendo: "SystemPropertiesAdvanced.exe". Apretamos donde dice "Variables de entorno", miramos que este correctamente ingresado el PATH, de lo contrario agregarlo. Seguido de eso, verificar que en "Variables del sistema", en la parte de "PATHEXT" esté ".EXE", de lo contrario agregarlo.
 
 # FFMPEG INSTALLATION
