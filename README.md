@@ -78,13 +78,13 @@ Los comentarios estarán debajo de cada porción con el fin de dejar el código 
     cd "C:\<folderName>\ffmpeg\bin"
 ```
 
-- Ingresaremos al directorio dónde tenemos el "ffmpeg.exe". La ruta se puede cambiar, todo depende de donde instalaron el "FFMPEG".
+- Enter to directory where we have "ffmpeg.exe". The path can be change, it all depends on where they installed the "FFMPEG".
 
 ```
     :Reboot
     cls
     @echo.
-    @echo Ingresar la URL de youtube:
+    @echo Enter the URL from youtube:
     set c="
     set /p URL=
     youtube-dl -f bestaudio %c%%URL%%c% -x --audio-format mp3 -o C:\<folderName>\<folderDownloads>\%%(title)s.^%%(ext)s && cls & @echo The download was completed successfully.
@@ -94,31 +94,31 @@ Los comentarios estarán debajo de cada porción con el fin de dejar el código 
     goto Reboot
 ```
 
-- Crear un bucle, en mi caso "Reiniciar"
-- Establecer una variable la cuál no se pueda modificar para que contenga unas comillas dobles.
-- Establecer una variable la cuál tenga que ponerla el usuario (va a ser la URL del video).
-- Extraer del video el mejor audio disponible.
+- Create a loop, in my case is "Reboot"
+- Set a variable which cannot be modified to contain double quotes.
+- Set a variable which the user has to set (will be the URL).
+- Extract the best audio available.
 - Normalmente los 2 formatos de audios que aparecerán son: ".wbem" ó ".m4a". No importa cuál, serán convertidos a ".mp3" con el programa "FFMPEG".
-- Ingresar la ruta dónde se descargaran las canciones, en mi caso es: `-o C:\<folderName>\<folderDownloads>\%%(title)s.^%%(ext)s`
+- Enter the path where to download the songs, in my case is: `-o C:\<folderName>\<folderDownloads>\%%(title)s.^%%(ext)s`
 
 # FINISHED SCRIPT
 
 ```
     @echo off
-    title Descargar canciones de youtube
+    title Downloader songs from Youtube
     color 0A
     @echo.
-    @echo A continuacion se realizaran chequeos de actualizaciones de Python y de youtube-dl.
-    @echo Pulsa cualquier tecla para continuar.
+    @echo Python and youtube-dl... Checking updates.
+    @echo Press any key to continue...
     pause>nul
     cls
     "c:\python 39\python.exe" -m pip install --upgrade pip
     pip install --upgrade youtube-dl
-    cd "C:\<nombreDeLaCarpeta>\ffmpeg\bin"
+    cd "C:\<folderName>\ffmpeg\bin"
     :Reboot
     cls
     @echo.
-    @echo Ingresar la URL de youtube:
+    @echo Enter the URL from youtube:
     set c="
     set /p URL=
     youtube-dl -f bestaudio %c%%URL%%c% -x --audio-format mp3 -o C:\<nameFolder>\<folderDownloads>\%%(title)s.^%%(ext)s && cls & @echo The download was completed successfully.
@@ -128,7 +128,7 @@ Los comentarios estarán debajo de cada porción con el fin de dejar el código 
     goto Reboot
 ```
 
-Acuerdense de cambiar las rutas, como por ejemplo: `"C:\<folderName>\ffmpeg\bin"` ó `C:\<folderName>\<folderDownloads>\%%(title)s.^%%(ext)s`
+Remember to change the paths, for the example: `"C:\<folderName>\ffmpeg\bin"` or `C:\<folderName>\<folderDownloads>\%%(title)s.^%%(ext)s`
 
 # COPYRIGHT
 
