@@ -1,4 +1,4 @@
 # These are supported funding platforms:
 
-github: # Can contribute to the GitHub project [LuukasOtero]
-paypal: # Even if it's not too little, they help a lot ['https://paypal.me/luukasotero']
+github: [LuukasOtero] # Can contribute to the GitHub project.
+paypal: ['https://paypal.me/luukasotero'] # Even if it's not too little, they help a lot.
