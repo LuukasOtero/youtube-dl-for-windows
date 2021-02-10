@@ -6,8 +6,7 @@
 - [PYTHON INSTALLATION](#python-installation)
 - [FFMPEG INSTALLATION](#ffmpeg-installation)
 - [YOUTUBE-DL INSTALLATION](#youtube-dl-installation)
-- [SCRIPT CREATION](#script-creation)
-- [FINISHED SCRIPT](#finished-script)
+- [SCRIPT](#script)
 - [COPYRIGHT](#copyright)
 
 # DESCRIPTION
@@ -39,88 +38,31 @@ Once the steps are done, will have something like this: `"C:\<nameFolder>\ffmpeg
 - Do not run it.
 - I recommend moving it to `"C:\<folderName>\" (are 2 directories behind to "\ffmpeg\bin")`
 
-# SCRIPT CREATION
-
-- Create a notepad in `"C:\<folderName>\"`
-- Change its extension to `".bat"`
-- *Right click -> edit*. If you have a preferred text editor you can also use it.
-
-The comments will be below each portion in order to leave the code clean. At the end, will be the same code without comments so that can copy and paste it, creating the necessary modifications.
-
-    @echo off
-    title Downloader songs from Youtube
-    color 0A
-    
-- Title of the script and color of the letters (it is to taste, it can be changed).
+# SCRIPT
 
 ```
-    @echo.
-    @echo Python and youtube-dl... Checking updates.
-    @echo Press any key to continue...
-    pause>nul
-    cls
-    "c:\python 39\python.exe" -m pip install --upgrade pip
-    pip install --upgrade youtube-dl
-```
-
-- In case an update is needed, the Python interpreter will download and install it. **THE PATH MAYBE CHANGE, IT DEPENDS ON WHERE YOU INSTALLED PYTHON, IF YOU HAVE ANOTHER PATH, CHANGE IT.**
-- It will also check if the application needs to be updated.
-
-```
-    cd "C:\<folderName>\ffmpeg\bin"
-```
-
-- Enter to directory where we have `"ffmpeg.exe"`. The path can be change, it all depends on where they installed the *"FFMPEG"*.
-
-```
-    :Reboot
-    cls
-    @echo.
-    @echo Enter the URL from youtube:
-    set c="
-    set /p URL=
-    youtube-dl -f bestaudio %c%%URL%%c% -x --audio-format mp3 -o C:\<folderName>\<folderDownloads>\%%(title)s.^%%(ext)s && cls & @echo The download was completed successfully.
-    @echo.
-    choice /c YN /n /m "Download another song? (Y,N)"
-    if errorlevel 2 goto Bye
-    goto Reboot
-```
-
-- Create a loop, in my case is `"Reboot"`
-- Set a variable which cannot be modified to contain double quotes.
-- Set a variable which the user has to set (URL).
-- Extract the best audio available.
-- Normally the 2 audio formats that will appear are: `".wbem"` or `".m4a"`. No matter which one, they will be converted to `".mp3"` with the program *"FFMPEG"*.
-- Enter the path where to download the songs, in my case is: `-o C:\<folderName>\<folderDownloads>\%%(title)s.^%%(ext)s`
-
-# FINISHED SCRIPT
-
-```
+#Title and color.
 @echo off
 title Downloader songs from Youtube
 color 0A
-@echo.
-@echo Python and youtube-dl... Checking updates.
-@echo Press any key to continue...
-pause>nul
-cls
-"c:\python 39\python.exe" -m pip install --upgrade pip
+#Checking updates... Python and Youtube-dl
+"c:\python 39\python.exe" -m pip install --upgrade pip #Change the PATH of the Python
 pip install --upgrade youtube-dl
-cd "C:\<folderName>\ffmpeg\bin"
+cd "C:\<folderName>\ffmpeg\bin" #Change <folderName> to the name of the folder you put.
 :Reboot
 cls
 @echo.
 @echo Enter the URL from youtube:
 set c="
 set /p URL=
-youtube-dl -f bestaudio %c%%URL%%c% -x --audio-format mp3 -o C:\<nameFolder>\<folderDownloads>\%%(title)s.^%%(ext)s && cls & @echo The download was completed successfully.
+youtube-dl -f bestaudio %c%%URL%%c% -x --audio-format mp3 -o "C:\<nameFolder>\<folderDownloads>\%%(title)s.^%%(ext)s" && cls & @echo The download was completed successfully.
 @echo.
 choice /c YN /n /m "Download another song? (Y,N)"
 if errorlevel 2 goto Bye
 goto Reboot
 ```
 
-Remember to change the paths, for the example: `"C:\<folderName>\ffmpeg\bin"` or `C:\<folderName>\<folderDownloads>\%%(title)s.^%%(ext)s`
+Remember to change the **PATHS**, for the example: `"C:\<folderName>\ffmpeg\bin"` or `C:\<folderName>\<folderDownloads>\%%(title)s.^%%(ext)s`
 
 # COPYRIGHT
 
