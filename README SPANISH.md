@@ -96,28 +96,28 @@ Los comentarios estarán debajo de cada porción con el fin de dejar el código 
 # SCRIPT TERMINADO
 
 ```
-    @echo off
-    title Descargar canciones de Youtube
-    color 0A
-    @echo.
-    @echo Comprobando actualizaciones de Python y de youtube-dl.
-    @echo Pulsa cualquier tecla para continuar...
-    pause>nul
-    cls
-    "c:\python 39\python.exe" -m pip install --upgrade pip
-    pip install --upgrade youtube-dl
-    cd "C:\<nombreDeLaCarpeta>\ffmpeg\bin"
-    :Reiniciar
-    cls
-    @echo.
-    @echo Ingresar la URL de youtube:
-    set c="
-    set /p URL=
-    youtube-dl -f bestaudio %c%%URL%%c% -x --audio-format mp3 -o C:\<nombreDeLaCarpeta>\<carpetaDeDescargas>\%%(title)s.^%%(ext)s && cls & @echo La descarga se completo exitosamente.
-    @echo.
-    choice /c SN /n /m "Descargar otra cancion? (S,N)"
-    if errorlevel 2 goto Adios
-    goto Reiniciar
+@echo off
+title Descargar canciones de Youtube
+color 0A
+@echo.
+@echo Comprobando actualizaciones de Python y de youtube-dl.
+@echo Pulsa cualquier tecla para continuar...
+pause>nul
+cls
+"c:\python 39\python.exe" -m pip install --upgrade pip
+pip install --upgrade youtube-dl
+cd "C:\<nombreDeLaCarpeta>\ffmpeg\bin"
+:Reiniciar
+cls
+@echo.
+@echo Ingresar la URL de youtube:
+set c="
+set /p URL=
+youtube-dl -f bestaudio %c%%URL%%c% -x --audio-format mp3 -o C:\<nombreDeLaCarpeta>\<carpetaDeDescargas>\%%(title)s.^%%(ext)s && cls & @echo La descarga se completo exitosamente.
+@echo.
+choice /c SN /n /m "Descargar otra cancion? (S,N)"
+if errorlevel 2 goto Adios
+goto Reiniciar
 ```
 
 Acuerdense de cambiar las rutas, como por ejemplo: `"C:\<nombreDeLaCarpeta>\ffmpeg\bin"` ó `C:\<nombreDeLaCarpeta>\<carpetaDeDescargas>\%%(title)s.^%%(ext)s`
