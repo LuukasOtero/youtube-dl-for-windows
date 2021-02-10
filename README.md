@@ -41,21 +41,23 @@ Once the steps are done, will have something like this: `"C:\<nameFolder>\ffmpeg
 # SCRIPT
 
 ```
-#Title and color.
 @echo off
 title Downloader songs from Youtube
 color 0A
-#Checking updates... Python and Youtube-dl
-"c:\python 39\python.exe" -m pip install --upgrade pip #Change the PATH of the Python
+::Checking updates... Python and Youtube-dl.
+::Change the PATH of the Python.
+"c:\python 39\python.exe" -m pip install --upgrade pip
 pip install --upgrade youtube-dl
-cd "C:\<folderName>\ffmpeg\bin" #Change <folderName> to the name of the folder you put.
+::Change "<folderName>"
+cd "C:\<folderName>\ffmpeg\bin"
 :Reboot
 cls
 @echo.
-@echo Enter the URL from youtube:
+@echo Enter the LINK from youtube:
 set c="
-set /p URL=
-youtube-dl -f bestaudio %c%%URL%%c% -x --audio-format mp3 -o "C:\<nameFolder>\<folderDownloads>\%%(title)s.^%%(ext)s" && cls & @echo The download was completed successfully.
+set /p LINK=
+::Change "<nameFolder>" and "<folderDownloads>"
+youtube-dl -f bestaudio %c%%LINK%%c% -x --audio-format mp3 -o "C:\<nameFolder>\<folderDownloads>\%%(title)s.^%%(ext)s" && cls & @echo The download was completed successfully.
 @echo.
 choice /c YN /n /m "Download another song? (Y,N)"
 if errorlevel 2 goto Bye
