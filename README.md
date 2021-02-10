@@ -16,20 +16,14 @@
 
 # PYTHON INSTALLATION
 
-As a first step we will install Python (if possible the most recent version, anyway later we will see how to update it), since we will use the Python interpreter to download videos from YouTube.
-
-To download Python:
-
-    https://www.python.org/downloads/
+### To download Python: *[Python](https://www.python.org/downloads/)*
     
 - Install Python.
-- Verify the "Python" **PATH** has been entered correctly. For that we will use the Windows shortcut, press *"Ctrl" + "R"*, then write: `"SystemPropertiesAdvanced.exe"`. Press  `"Environment Variables"` button, check that the **PATH** is correctly entered, otherwise add it. Then, verify *"System variables"*, in the *"PATHEXT"* part to have *".EXE"*, otherwise add it.
+- Verify the "Python" **PATH** has been entered correctly. For that we will use the Windows shortcut, press *"Win" + "R"*, then write: `"SystemPropertiesAdvanced.exe"`. Press  `"Environment Variables"` button, check that the **PATH** is correctly entered, otherwise add it. Then, verify *"System variables"*, in the *"PATHEXT"* part to have *".EXE"*, otherwise add it.
 
 # FFMPEG INSTALLATION
 
-To download FFMPEG:
-
-    https://ffmpeg.org/download.html#build-windows
+### To download FFMPEG: *[FFMPEG](https://ffmpeg.org/download.html#build-windows)*
 
 - I recommend moving the downloaded file to disk `"C"`, can create a folder called *"FFMPEG"*, for example.
 - Unzip the `".rar"` into the aforementioned folder.
@@ -39,9 +33,7 @@ Once the steps are done, will have something like this: `"C:\<nameFolder>\ffmpeg
 
 # YOUTUBE-DL INSTALLATION
 
-To download Youtube-dl:
-
-    http://ytdl-org.github.io/youtube-dl/
+### To download Youtube-dl: *[Youtube-dl](http://ytdl-org.github.io/youtube-dl/)*
 
 - Download `"youtube-dl"`
 - Do not run it.
@@ -104,28 +96,28 @@ The comments will be below each portion in order to leave the code clean. At the
 # FINISHED SCRIPT
 
 ```
-    @echo off
-    title Downloader songs from Youtube
-    color 0A
-    @echo.
-    @echo Python and youtube-dl... Checking updates.
-    @echo Press any key to continue...
-    pause>nul
-    cls
-    "c:\python 39\python.exe" -m pip install --upgrade pip
-    pip install --upgrade youtube-dl
-    cd "C:\<folderName>\ffmpeg\bin"
-    :Reboot
-    cls
-    @echo.
-    @echo Enter the URL from youtube:
-    set c="
-    set /p URL=
-    youtube-dl -f bestaudio %c%%URL%%c% -x --audio-format mp3 -o C:\<nameFolder>\<folderDownloads>\%%(title)s.^%%(ext)s && cls & @echo The download was completed successfully.
-    @echo.
-    choice /c YN /n /m "Download another song? (Y,N)"
-    if errorlevel 2 goto Bye
-    goto Reboot
+@echo off
+title Downloader songs from Youtube
+color 0A
+@echo.
+@echo Python and youtube-dl... Checking updates.
+@echo Press any key to continue...
+pause>nul
+cls
+"c:\python 39\python.exe" -m pip install --upgrade pip
+pip install --upgrade youtube-dl
+cd "C:\<folderName>\ffmpeg\bin"
+:Reboot
+cls
+@echo.
+@echo Enter the URL from youtube:
+set c="
+set /p URL=
+youtube-dl -f bestaudio %c%%URL%%c% -x --audio-format mp3 -o C:\<nameFolder>\<folderDownloads>\%%(title)s.^%%(ext)s && cls & @echo The download was completed successfully.
+@echo.
+choice /c YN /n /m "Download another song? (Y,N)"
+if errorlevel 2 goto Bye
+goto Reboot
 ```
 
 Remember to change the paths, for the example: `"C:\<folderName>\ffmpeg\bin"` or `C:\<folderName>\<folderDownloads>\%%(title)s.^%%(ext)s`
