@@ -40,6 +40,8 @@ Once the steps are done, will have something like this: `"C:\<nameFolder>\ffmpeg
 
 # SCRIPT
 
+Lines that have `::` are commented out and have no effect on the script.
+
 ```
 @echo off
 title Downloader songs from Youtube
