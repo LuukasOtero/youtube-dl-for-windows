@@ -23,7 +23,7 @@ Para descargar Python:
     https://www.python.org/downloads/
     
 - Instalar Python.
-- Verificar que el **PATH** de "Python" se haya ingresado correctamente. Para eso usaremos un shortcut, apretando *"Ctrl" + "R"*, luego escribir: `"SystemPropertiesAdvanced.exe"`. Apretamos el botón `"Variables de entorno"`, miramos que este correctamente ingresado el **PATH**, de lo contrario agregarlo. Luego, verificar que en *"Variables del sistema"*, en la parte de *"PATHEXT"* esté *".EXE"*, de lo contrario agregarlo.
+- Verificar que el **PATH** de "Python" se haya ingresado correctamente. Para eso usaremos un shortcut, apretando *"Tecla windows" + "R"*, luego escribir: `"SystemPropertiesAdvanced.exe"`. Apretamos el botón `"Variables de entorno"`, miramos que este correctamente ingresado el **PATH**, de lo contrario agregarlo. Luego, verificar que en *"Variables del sistema"*, en la parte de *"PATHEXT"* esté *".EXE"*, de lo contrario agregarlo.
 
 # Instalación de FFMPEG
 
