@@ -1,6 +1,5 @@
 [![Build Status](https://github.com/ytdl-org/youtube-dl/workflows/CI/badge.svg)](https://github.com/ytdl-org/youtube-dl/actions?query=workflow%3ACI)
 
-1. asd
 # YOUTUBE-DL PARA WINDOWS - DESCARGAR CANCIONES DE YOUTUBE.COM
 
 - [DESCRIPCIÓN](#descripción)
@@ -20,7 +19,7 @@
 ### Para descargar Python: [Python](https://www.python.org/downloads/)
     
 - Instalar Python.
-- Verificar que el **PATH** de "Python" se haya ingresado correctamente. Para eso usaremos un shortcut, apretando *"Tecla windows" + "R"*, luego escribir: `"SystemPropertiesAdvanced.exe"`. Apretamos el botón `"Variables de entorno"`, miramos que este correctamente ingresado el **PATH**, de lo contrario agregarlo. Luego, verificar que en *"Variables del sistema"*, en la parte de *"PATHEXT"* esté *".EXE"*, de lo contrario agregarlo.
+- Verificar que el **PATH** de "Python" se haya ingresado correctamente. Para eso usaremos un shortcut, apretando *"Win" + "R"*, luego escribir: `"SystemPropertiesAdvanced.exe"`. Apretamos el botón `"Variables de entorno"`, miramos que este correctamente ingresado el **PATH**, de lo contrario agregarlo. Luego, verificar que en *"Variables del sistema"*, en la parte de *"PATHEXT"* esté *".EXE"*, de lo contrario agregarlo.
 
 # Instalación de FFMPEG
 
