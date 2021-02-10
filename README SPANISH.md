@@ -6,8 +6,7 @@
 - [INSTALACIÓN DE PYTHON](#instalación-de-python)
 - [INSTALACIÓN DE FFMPEG](#instalación-de-ffmpeg)
 - [INSTALACIÓN DE YOUTUBE-DL](#instalación-de-youtube-dl)
-- [CREACIÓN DEL SCRIPT](#creación-del-script)
-- [SCRIPT TERMINADO](#script-terminado)
+- [SCRIPT](#script)
 - [COPYRIGHT](#copyright)
 
 # DESCRIPCIÓN
@@ -39,81 +38,28 @@ Una vez realizado los pasos, te quedará algo así: `"C:\<nombreDeLaCarpeta>\ffm
 - No ejecutarlo.
 - Recomiendo moverlo a `"C:\<nombreDeLaCarpeta>\" (son 2 directorios atrás de "\ffmpeg\bin")`
 
-# Creación del Script
+# SCRIPT
 
-- Crear un bloc de notas en `"C:\<nombreDeLaCarpeta>\"`
-- Cambiamos su extensión por `".bat"`
-- *Click derecho -> editar*. En caso de tener un editor de texto de preferencia también se puede usar.
-
-Los comentarios estarán debajo de cada porción con el fin de dejar el código limpio. Al final, estará el mismo sin comentarios para que puedan copiarlo y pegarlo, creando las modificaciones necesarias.
-
-    @echo off
-    title Descargar canciones de Youtube
-    color 0A
-    
-- Título del script y color de las letras (es a gusto, se puede cambiar).
-
-```
-    @echo.
-    @echo Comprobando actualizaciones de Python y de youtube-dl.
-    @echo Pulsa cualquier tecla para continuar...
-    pause>nul
-    cls
-    "c:\python 39\python.exe" -m pip install --upgrade pip
-    pip install --upgrade youtube-dl
-```
-
-- En caso de necesitar una actualización el interprete de Python, la descargará e instalará. LA RUTA PUEDE CAMBIAR, TODO DEPENDE DE DONDE INSTALASTE PYTHON, EN CASO DE TENER OTRA RUTA, CAMBIARLA.
-- También revisará si la aplicación necesita actualizarse.
-
-```
-    cd "C:\<nombreDeLaCarpeta>\ffmpeg\bin"
-```
-
-- Ingresaremos al directorio dónde tenemos el `"ffmpeg.exe"`. La ruta se puede cambiar, todo depende de donde instalaron el *"FFMPEG"*.
-
-```
-    :Reiniciar
-    cls
-    @echo.
-    @echo Ingresar la URL de youtube:
-    set c="
-    set /p URL=
-    youtube-dl -f bestaudio %c%%URL%%c% -x --audio-format mp3 -o C:\<nombreDeLaCarpeta>\<carpetaDeDescargas>\%%(title)s.^%%(ext)s && cls & @echo La descarga se completo exitosamente.
-    @echo.
-    choice /c SN /n /m "Descargar otra cancion? (S,N)"
-    if errorlevel 2 goto Adios
-    goto Reiniciar
-```
-
-- Crear un bucle, en mi caso `"Reiniciar"`
-- Establecer una variable la cuál no se pueda modificar para que contenga unas comillas dobles.
-- Establecer una variable la cuál tenga que poner el usuario (URL del video).
-- Extraer del video el mejor audio disponible.
-- Normalmente los 2 formatos de audios que aparecerán son: `".wbem"` ó `".m4a"`. No importa cuál, serán convertidos a `".mp3"` con el programa *"FFMPEG"*.
-- Ingresar la ruta dónde se descargaran las canciones, en mi caso es: `-o C:\<nombreDeLaCarpeta>\<carpetaDeDescargas>\%%(title)s.^%%(ext)s`
-
-# SCRIPT TERMINADO
+Las lineas que tienen `::` estan comentadas y no tienen nigun efecto en el script.
 
 ```
 @echo off
 title Descargar canciones de Youtube
 color 0A
-@echo.
-@echo Comprobando actualizaciones de Python y de youtube-dl.
-@echo Pulsa cualquier tecla para continuar...
-pause>nul
-cls
+::Comprobando actualizaciones de Python and Youtube-dl.
+::Cambiar la ruta de Python.
 "c:\python 39\python.exe" -m pip install --upgrade pip
 pip install --upgrade youtube-dl
+::Cambiar <nombreDeLaCarpeta>
 cd "C:\<nombreDeLaCarpeta>\ffmpeg\bin"
 :Reiniciar
 cls
 @echo.
-@echo Ingresar la URL de youtube:
+@echo Ingresar el LINK de youtube:
 set c="
-set /p URL=
-youtube-dl -f bestaudio %c%%URL%%c% -x --audio-format mp3 -o C:\<nombreDeLaCarpeta>\<carpetaDeDescargas>\%%(title)s.^%%(ext)s && cls & @echo La descarga se completo exitosamente.
+set /p LINK=
+::Cambiar <nombreDeLaCarpeta> y <carpetaDeDescargas>
+youtube-dl -f bestaudio %c%%LINK%%c% -x --audio-format mp3 -o C:\<nombreDeLaCarpeta>\<carpetaDeDescargas>\%%(title)s.^%%(ext)s && cls & @echo La descarga se completo exitosamente.
 @echo.
 choice /c SN /n /m "Descargar otra cancion? (S,N)"
 if errorlevel 2 goto Adios
