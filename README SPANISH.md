@@ -16,14 +16,14 @@
 
 # INSTALACIÓN DE PYTHON
 
-### Para descargar Python: [Python](https://www.python.org/downloads/)
+### Para descargar Python: *[Python](https://www.python.org/downloads/)*
     
 - Instalar Python.
 - Verificar que el **PATH** de "Python" se haya ingresado correctamente. Para eso usaremos un shortcut, apretando *"Win" + "R"*, luego escribir: `"SystemPropertiesAdvanced.exe"`. Apretamos el botón `"Variables de entorno"`, miramos que este correctamente ingresado el **PATH**, de lo contrario agregarlo. Luego, verificar que en *"Variables del sistema"*, en la parte de *"PATHEXT"* esté *".EXE"*, de lo contrario agregarlo.
 
 # Instalación de FFMPEG
 
-### Para descargar FFMPEG: [FFMPEG](https://ffmpeg.org/download.html#build-windows)
+### Para descargar FFMPEG: *[FFMPEG](https://ffmpeg.org/download.html#build-windows)*
 
 - Recomiendo mover el archivo descargado al disco local `"C"`, pueden crear una carpeta llamada *"FFMPEG"*, por ejemplo.
 - Descomprimir el `".rar"` en la carpeta antes mencionada.
@@ -33,7 +33,7 @@ Una vez realizado los pasos, te quedará algo así: `"C:\<nombreDeLaCarpeta>\ffm
 
 # Instalación de Youtube-dl
 
-### Para descargar Youtube-dl: [Youtube-dl](http://ytdl-org.github.io/youtube-dl/)
+### Para descargar Youtube-dl: *[Youtube-dl](http://ytdl-org.github.io/youtube-dl/)*
 
 - Descargar `"youtube-dl"`
 - No ejecutarlo.
